@@ -1,0 +1,128 @@
+/**
+ * Pure CSS implementation of a Management Console for an application.
+ * 
+ * Aims for simplicity.
+ * Works on IE 8, and all modern browsers.  Does not require Chrome Frame except on IE 7 and earlier.
+ * This document validates as CSS level 3 at http://jigsaw.w3.org/css-validator/validator
+ *
+ *  Copyright (C) 2011 Christopher M. Balz 
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* Begin Top-level Tag Management */
+
+html.tlswe-mc, body.tlswe-mc {  /* Allow the div's to stretch vertically 100%. */
+    height: 100%;
+}
+
+body.tlswe-mc {  
+    /* 
+       The browsers add a standard margin to the 'body' tag to make 
+       document authoring easier.  But this is an application viewport instead of a document.  
+       So we remove it. 
+    */
+    margin: 0px;
+}
+
+/* End Top-level Tag Management */
+
+
+/* Begin Manage Top-Level Blocks */
+
+
+/*     Begin Main Content Wrapper Positioning */
+/*        This wrapper contains the columns.  */
+.tlswe-mc-main-content {     
+    /* 
+       The absolute positioning of the main content wrapper, as distinguished from the other two 
+       components on the page - header and footer - enables it to peaceably share the viewport
+       with them.  In other words, the absolute position enables us to stretch it as far as
+       possible vertically without overrunning the territory held by the header and footer. 
+     */
+    position: absolute;
+    top: 50px;             
+    bottom: 20px; 
+}
+
+/*     End Main Content Wrapper Positioning */
+
+/*     Begin Footer Positioning */
+.tlswe-mc-footer
+{
+    position: absolute;
+    bottom: 0px;
+    height: 20px;  /* We must use pixels here as 'em's don't calculate precisely enough. */
+    width: 100%;
+}
+
+/*     End Footer Positioning */
+
+/* End Manage Top-Level Blocks */
+
+
+
+/* Begin Column Layout Management */
+/* The columns are managed in a pure css float arrangement! */
+.tlswe-mc-main-content .tlswe-mc-column {
+    height: 100%; 
+    float: left; 
+}
+
+.tlswe-mc-left {
+    width: 25%; 
+    background-color: lemonchiffon; 
+}
+
+.tlswe-mc-center {
+    width: 65%; 
+    background-color: pink;  
+}
+
+.tlswe-mc-right {
+    width: 10%; 
+    background-color: limegreen; 
+}
+
+.tlswe-mc-column .tlswe-mc-content { 
+    width: 100%; 
+    height: 100%; 
+}
+
+/*     Begin Column Content Management */
+
+/*         This is the master-detail view on the center column. */
+.tlswe-master-detail.tlswe-master {    
+    height: 33%;
+    background-color: skyblue;
+}
+
+.tlswe-master-detail.tlswe-detail {
+    height: 67%;
+    background-color: yellow;
+}
+
+/*     End Column Content Management */
+
+/* End Column Layout Management */
+
+
+/* Begin Footer Presentational Styles */
+
+.tlswe-mc-footer-centerable {
+    /* We could use probably table-cell display in the parent element to get perfect centering. */
+ 	text-align: center; 
+}
+
+/* End Footer Presentational Styles */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+    Pure CSS-based implementation of a Management Console for an application.
+    Aims for simplicity.
+    Works on IE 8, and all modern browsers.
+
+    By 'program', below, is meant the html page and the associated css (in the css files linked and 
+    any in-line) used for positioning the columns and master-detail panes of the Management 
+    Console, and no other code.
+
+    Copyright (C) 2011 Christopher M. Balz 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  
+ -->
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="tlswe-mc">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=10" />
+    <![endif]-->
+
+    <title>Pure CSS Mananagement Console Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/application.css" />
+  </head>
+
+  <body class="tlswe-mc">
+
+    <!-- Header -->
+    <div class="tlswe-mc-header">
+      <div class="tlswe-mc-identity"><img src="images/img_src_placeholder.png" class="tlswe-mc-logo" alt="Your Company Logo"/></div>
+      <div class="tlswe-mc-authentication">You are currently logged in as jethro <a href="#">logout</a></div>
+    </div>
+
+    <!-- Main Content -->
+    <!--    Here begin the three columns -->
+    <!--    This element is used to share the screen with the 'header' and 'footer' 
+            via absolute positioning.  Otherwise, we can't keep everything in the viewable area. 
+    -->
+    <div class="tlswe-mc-main-content">  
+
+      <!-- Left Column -->      
+      <div class="tlswe-mc-left tlswe-mc-column" >
+        left left left left left left left left left left left left
+        left left left left left left left left left left left left
+        left left left left left left left left left left left left
+        left left left left left left left left left left left left
+      </div>
+
+      <!-- Center Column -->      
+      <div class="tlswe-mc-center tlswe-mc-column">
+        <!-- Master-Detail in the Center Column -->
+        <div class="tlswe-master-detail tlswe-master">
+          master master master master master master master master master 
+          master master master master master master master master master 
+          master master master master master master master master master 
+          master master master master master master master master master 
+        </div>
+        <div class="tlswe-master-detail tlswe-detail">
+          detail detail detail detail detail detail detail detail detail 
+          detail detail detail detail detail detail detail detail detail 
+          detail detail detail detail detail detail detail detail detail 
+          detail detail detail detail detail detail detail detail detail 
+        </div>
+      </div>
+
+      <!-- Right Column -->      
+      <div class="tlswe-mc-right tlswe-mc-column">
+        right right right right right right right right right right 
+        right right right right right right right right right right 
+        right right right right right right right right right right 
+        right right right right right right right right right right 
+      </div>
+      <!--[if IE 7]>
+        <div class="tlswe-mc-clearing-block-ie7">&nbsp;</div>
+        <![endif]-->
+    </div>
+
+    <!-- Footer -->
+    <div class="tlswe-mc-footer">
+      <div class="tlswe-mc-footer-centerable">
+        Copyright 2011 Your Company Here - All Rights Reserved
+      </div>
+    </div>
+
+  </body>
+</html>
