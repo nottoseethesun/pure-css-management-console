@@ -1,0 +1,3 @@
+Try this live at the link below.  It's the skeleton of a liquid-layout, viewport-format three column Web application management console (e.g., iTunes (R)).  It uses only css and html, but JavaScript could be added.
+
+Fork this and add JavaScript to make the panels individually resizable.
